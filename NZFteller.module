@@ -4,16 +4,16 @@ function NZFteller_menu() {
   // load the config file
   $configString = file_get_contents(__DIR__ . "/config.json");
   $config = json_decode($configString);
-  
-	$items = array();
 
-	$items[$config->overviewPageURL] = array(
-		'title' => $config->overviewPageTitle,
-		'page callback' => 'NZFteller_overzicht_page',
-		'access callback' => 'user_is_logged_in',
-		'description' => $config->overviewPageTitle,
-		'type' => MENU_CALLBACK,
-	);
+  $items = array();
+
+  $items[$config->overviewPageURL] = array(
+    'title' => $config->overviewPageTitle,
+    'page callback' => 'NZFteller_overzicht_page',
+    'access callback' => 'user_is_logged_in',
+    'description' => $config->overviewPageTitle,
+    'type' => MENU_CALLBACK,
+  );
 
   $items[$config->detailPageURL] = array(
     'title' => $config->detailPageTitle,
@@ -23,18 +23,15 @@ function NZFteller_menu() {
     'type' => MENU_CALLBACK,
   );
 
-	return $items;
+  return $items;
 }
 
 function NZFteller_overzicht_page() {
   include_once DRUPAL_ROOT . '/sites/default/modules/custom/nl.sp.drupal-tellerlib/tellerlib-overzicht.inc';
 
   // load the config file
-  $configString = file_get_contents("config.json");
+  $configString = file_get_contents(__DIR__ . "/config.json");
   $config = json_decode($configString);
-
-  // load the help
-  module_load_include('inc', 'nl.sp.drupal-tellerlib', 'tellerlib-overzicht');
 
   return tellerlib_overzicht($config);
 }
@@ -43,7 +40,7 @@ function NZFteller_detail_page() {
   include_once DRUPAL_ROOT . '/sites/default/modules/custom/nl.sp.drupal-tellerlib/tellerlib-detail.inc';
 
   // load the config file
-  $configString = file_get_contents("config.json");
+  $configString = file_get_contents(__DIR__ . "/config.json");
   $config = json_decode($configString);
 
   // load the help
@@ -51,3 +48,4 @@ function NZFteller_detail_page() {
 
   return tellerlib_detail($config);
 }
+
