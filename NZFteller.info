@@ -1,0 +1,11 @@
+; $Id$
+ 
+name = NZF Overzicht2
+description = Overzicht aanmeldingen Nationaal ZorgFonds campagne
+package = sprbs
+core = 7.x
+
+dependencies[] = civicrm
+
+files[] = NZFteller.module
+
