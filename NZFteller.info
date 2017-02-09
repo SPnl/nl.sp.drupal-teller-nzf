@@ -1,11 +1,11 @@
 ; $Id$
  
-name = NZF Overzicht2
+name = NZF Overzicht
 description = Overzicht aanmeldingen Nationaal ZorgFonds campagne
 package = sprbs
 core = 7.x
 
-dependencies[] = civicrm
+dependencies[] = tellerlib
 
 files[] = NZFteller.module
 
