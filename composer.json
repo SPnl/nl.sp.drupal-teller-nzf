@@ -1,7 +1,6 @@
 {
   "name": "SPnl/nl.sp.drupal-teller-nzf",
   "description": "Overzicht aanmeldingen Nationaal ZorgFonds campagne",
-  "version": "1.0.0",
   "type": "drupal-module",
   "authors": [
     {
