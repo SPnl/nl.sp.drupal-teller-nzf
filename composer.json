@@ -1,7 +1,7 @@
 {
-  "name": "SPnl/nl.sp.drupal-teller-nzf",
+  "name": "spnl/nl.sp.drupal-teller-nzf",
   "description": "Overzicht aanmeldingen Nationaal ZorgFonds campagne",
-  "type": "drupal-module",
+  "type": "drupal-custom-module",
   "authors": [
     {
       "name": "Alain Benbassat",

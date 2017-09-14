@@ -3,6 +3,7 @@
 name = NZF Overzicht
 description = Overzicht aanmeldingen Nationaal ZorgFonds campagne
 package = sprbs
+version = 1.0.1
 core = 7.x
 
 dependencies[] = tellerlib
